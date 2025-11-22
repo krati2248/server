@@ -21,7 +21,7 @@ app.use(fileUpload({
 app.use(cookieParser());
 // Use this
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://client-u2ci.vercel.app',
   credentials: true 
 }));
 
