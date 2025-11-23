@@ -47,8 +47,8 @@ class UserController {
         return res
           .cookie("token", token, {
             httpOnly: true,
-            secure: false,
-            sameSite: "Lax",
+            secure: true,
+            sameSite: "none",
             maxAge: 4 * 24 * 60 * 60 * 1000,
           })
           .json({ message: "Login successful", user });
@@ -67,8 +67,8 @@ class UserController {
 
       res.cookie("token", token, {
         httpOnly: true,
-        secure: false,
-        sameSite: "Lax",
+        secure: true,
+        sameSite: "none",
         maxAge: 4 * 24 * 60 * 60 * 1000,
       }).json({ message: "Login successful", token });
 
@@ -82,8 +82,8 @@ class UserController {
   static async logout(req, res) {
     res.clearCookie("token", {
       httpOnly: true,
-      secure: false,
-      sameSite: "Lax",
+      secure: true,
+      sameSite: "none",
     });
     return res.json({ message: "Logged out successfully" });
   }
@@ -199,7 +199,7 @@ class UserController {
       to: email, // list of receivers
       subject: "Reset Password", // Subject line
       text: "heelo", // plain text body
-      html: "<p>Hii " +
+      html: "<p>Hello, " +
         name +
         ',Please click here to <a href="http://localhost:5173/reset-password?token=' +
         token +
