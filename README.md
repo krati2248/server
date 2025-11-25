@@ -1,17 +1,17 @@
-Server – Job Portal API
+# Server – Job Portal API
 
 This repository contains the backend/server of the Job Portal Application, built using Node.js, Express.js, MongoDB (Mongoose), and JWT authentication.
 It provides secure REST APIs for user authentication, job posting, job editing, deleting, and managing user profiles.
 
-🚀 Features
+## 🚀 Features
 
 User Registration & Login
 
 JWT-Based Authentication
 
-Forgot Password + Email Reset Link
+Forgot Password + Reset
 
-CRUD Operations for Job Posts
+CRUD tasks for Job Posts
 
 Protected Routes (Auth Middleware)
 
@@ -19,27 +19,27 @@ MongoDB Atlas Integration
 
 Fully deployed on Render
 
-🛠️ Tech Stack 
+## 🛠️ Tech Stack 
 
-Server	Node.js, Express.js
+Server -	Node.js, Express.js
 
-Database	MongoDB Atlas, Mongoose
+Database -	MongoDB Atlas, Mongoose
 
-Authentication	JWT, bcrypt
+Authentication -	JWT, bcrypt
 
 Email Service	Nodemailer (Gmail SMTP)
 
-Deployment	Render
+Deployment -	Render
 
-🔗 API Base URL
+### 🔗 API Base URL
 
 https://server-s9je.onrender.com/api
 
 
 
-📚 API Endpoints
+## 📚 API Endpoints
 
-Auth Routes
+### Auth Routes
 
 Method	Endpoint	Description
 
@@ -49,7 +49,7 @@ POST	  /login	    Login user
 
 GET	    /me	        Get logged-in user profile 
 
-Job Routes
+### Job Routes
 
 Method	Endpoint	    Description
 
@@ -60,7 +60,7 @@ GET	   /getjobs	      Fetch all jobs
 GET	   /jobview/:id	  Get single job by ID
 
 
-🔐 Authentication Workflow
+## 🔐 Authentication Workflow
 
 User logs in → Server sends JWT token via cookies
 
